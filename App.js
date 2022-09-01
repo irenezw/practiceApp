@@ -10,7 +10,10 @@ export default function App() {
 
   useEffect(()=> {
     getData()
-    .then(myData => setCount(JSON.parse(myData))).catch(err => {console.log('useEffect data fetch failed ', err)})
+    .then(myData => setCount(JSON.parse(myData)))
+    .catch(err => {
+      console.log('useEffect data fetch failed ', err)
+    })
   }, [])
 
   const storeData = async (num) => {
